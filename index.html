@@ -35,6 +35,12 @@
           <footer><%= commentFooter %></footer>
         </div>
       </script>  <!--end comment-template -->
+      <form id="post-form" onsubmit="createPost();">
+        Title: <input type="text" id="postHeader" name="postHeader" value=""><br>
+        Content: <input type="textarea" name="postContent" id="postContent"><br>
+        Author: <input type="text" name="postFooter" id="postFooter"><br>
+        <input type="submit" name="" value="Create Post">
+      </form>
 
     </main>
     <script src="node_modules/lodash/lodash.min.js"></script>

@@ -13,26 +13,27 @@
 
       <script id="post-template" type="text/x-lodash-template">
         <article>
-          <header><%= header %></header>
-          <p><%= content %></p>
-          <footer><%= footer %></footer>
+          <header><%= postHeader %></header>
+          <p><%= postContent %></p>
+          <footer><%= postFooter %></footer>
         </article>
       </script>  <!--end post-template -->
 
       <script id="comments-template" type="text/x-lodash-template">
-        <article>
-          <header><%= header %></header>
-          <p><%= content %></p>
-          <footer><%= footer %></footer>
-        </article>
+        <form id="comments-form" onsubmit="postComment();">
+          Name: <input type="text" id="commenterName"><br>
+          Comment: <input type="textarea" id="commentText"><br>
+          <input type="submit">
+        </form>
+        <div id="comments">
+        </div>
       </script>  <!--end comments-template -->
 
       <script id="comment-template" type="text/x-lodash-template">
-        <article>
-          <header><%= header %></header>
-          <p><%= content %></p>
-          <footer><%= footer %></footer>
-        </article>
+        <div id="comment">
+          <p><%= commentContent %></p>
+          <footer><%= commentFooter %></footer>
+        </div>
       </script>  <!--end comment-template -->
 
     </main>

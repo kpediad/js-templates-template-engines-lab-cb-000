@@ -15,6 +15,10 @@ function createPost() {
   let postTmplateHTML = postTmplateFn({postHeader: postHeader, postContent: postContent, postFooter: postFooter});
   let pageTmplateHTML = pageTmplateFn({sidebar: '', post: postTmplateHTML});
 
+  let main = document.querySelector('main');
+
+  main.innerHTML += pageTmplateHTML;
+  main.innerHTML += commentsTmplateHTML;
 
 }
 

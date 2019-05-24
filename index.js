@@ -14,8 +14,8 @@ function createPost() {
   let commentsTmplateHTML = commentsTmplateFn();
   let postTmplateHTML = postTmplateFn({postHeader: postHeader, postContent: postContent, postFooter: postFooter});
   let pageTmplateHTML = pageTmplateFn({sidebar: '', post: postTmplateHTML});
-  
-   
+
+
 }
 
 function postComment() {

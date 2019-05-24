@@ -1,5 +1,21 @@
 function createPost() {
+  let postHeader = document.getElementById('postHeader').value;
+  let postContent = document.getElementById('postContent').value;
+  let postFooter = document.getElementById('postFooter').value;
 
+  let pageTemplate = document.getElementById('page-template').innerHTML;
+  let postTemplate = document.getElementById('post-template').innerHTML;
+  let commentsTemplate = document.getElementById('comments-template').innerHTML;
+
+  let pageTmplateFn = _.template(pageTemplate);
+  let postTmplateFn = _.template(postTemplate);
+  let commentsTmplateFn = _.template(commentsTemplate);
+
+  let commentsTmplateHTML = commentsTmplateFn();
+  let postTmplateHTML = postTmplateFn({postHeader: postHeader, postContent: postContent, postFooter: postFooter});
+  let pageTmplateHTML = pageTmplateFn({sidebar: '', post: postTmplateHTML});
+  
+   
 }
 
 function postComment() {
